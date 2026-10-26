@@ -2,6 +2,8 @@
 name = "lamprey"
 version = "0.1.0"
 edition = "2024"
+authors = ["Thomas Wachter"]
+license = "GPL-2.0-only"
 
 [dependencies]
 anyhow = { version = "1.0.104", default-features = false }
@@ -14,7 +16,6 @@ hashbrown = { version = "0.17.1", default-features = false, features = [
     "equivalent",
 ] }
 log = "0.4.34"
-multiboot2 = "0.28.0"
 nom = { version = "8.0.0", default-features = false }
 uefi = { version = "0.41.0", features = ["alloc", "global_allocator", "logger", "panic_handler"] }
 

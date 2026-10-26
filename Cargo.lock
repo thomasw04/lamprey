@@ -93,7 +93,6 @@ dependencies = [
  "elf",
  "hashbrown",
  "log",
- "multiboot2",
  "nom",
  "uefi",
 ]
@@ -109,31 +108,6 @@ name = "memchr"
 version = "2.8.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98"
-
-[[package]]
-name = "multiboot2"
-version = "0.28.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7cf7daaa58aa8e20c758a65a0f33f6b7dd16888bf34bd8e53cf7c2ce3ac9a477"
-dependencies = [
- "bitflags",
- "elf",
- "log",
- "multiboot2-common",
- "ptr_meta",
- "thiserror",
- "uefi-raw 0.16.0",
-]
-
-[[package]]
-name = "multiboot2-common"
-version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b40486c7028ec9fa2382232962262a2063eb7a609621f5fc9276f554fd9d4c5e"
-dependencies = [
- "ptr_meta",
- "thiserror",
-]
 
 [[package]]
 name = "nom"
@@ -194,26 +168,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "thiserror"
-version = "2.0.21"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "09e52cb86a36cede5cb101bf8908837b3e4c6e5e59fe7fd85c23fb56200d189e"
-dependencies = [
- "thiserror-impl",
-]
-
-[[package]]
-name = "thiserror-impl"
-version = "2.0.21"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fe5197923287db20a58125f0bc85c062f7f2c892de97b18c356f9efb14b28524"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
 name = "ucs2"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -234,7 +188,7 @@ dependencies = [
  "ptr_meta",
  "ucs2",
  "uefi-macros",
- "uefi-raw 0.17.0",
+ "uefi-raw",
  "uguid",
 ]
 
@@ -247,16 +201,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
-]
-
-[[package]]
-name = "uefi-raw"
-version = "0.16.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0b86018f5a44661f30db808298ccfcbe326279239c4d17a347c5476065ff72c0"
-dependencies = [
- "bitflags",
- "uguid",
 ]
 
 [[package]]
