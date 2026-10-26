@@ -1,6 +1,6 @@
 # Lamprey
 
-Lamprey is a readable and fast UEFI bootloader for Barrelfish on AArch64.
+Lamprey is a readable and (hopefully) fast UEFI bootloader for Barrelfish on AArch64 QEMU.
 
 ## Requirements
 
