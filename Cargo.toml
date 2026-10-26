@@ -1,0 +1,24 @@
+[package]
+name = "lamprey"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = { version = "1.0.104", default-features = false }
+bytemuck = { version = "1.25.2", features = ["derive"] }
+cpio_reader = "0.1.2"
+elf = { version = "0.8.0", default-features = false }
+hashbrown = { version = "0.17.1", default-features = false, features = [
+    "default-hasher",
+    "inline-more",
+    "equivalent",
+] }
+log = "0.4.34"
+multiboot2 = "0.28.0"
+nom = { version = "8.0.0", default-features = false }
+uefi = { version = "0.41.0", features = ["alloc", "global_allocator", "logger", "panic_handler"] }
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
